@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706339e4313c4664fa26c3b328151180, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  IsGameLaunchedBefore: 1
+  IsVibrationOn: 1
+  IsSoundOn: 1
+  IsMechanicsTutorialComplete: 1
+  IsMetaTutorialComplete: 1
+  Currency: 0
+  CurrentLevelIndex: 20
+  IsRandomLevel: 0
+  EventLevelIndex: 20
+  InterstitalCounter: 0
+  PlayerAvatarGlobalMapPositionIndex: 20
+  OpenLocations:
+    keyData: 000000000100000002000000030000000400000005000000
+    valueData: 010101000100
+  OfflineTimeKey: 
+  DailyTimeKey: 
+  InterCapRestartTimeKey: 
+  FortuneWheelTimeKey: 
+  MonetizationPackTimeKey: 
+  DailyTasksTimeKey: 
+  CurrentTutorialStep: 15
+  GameProgressStep: 3
+  TutrorialStates:
+    keyData: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
+    valueData: 01010101010101010101000001010101
+  GameProgressData:
+  - IsCompleted: 1
+    IsRewardTaken: 1
+    CurrentValue: 5
+  - IsCompleted: 1
+    IsRewardTaken: 1
+    CurrentValue: 15
+  - IsCompleted: 1
+    IsRewardTaken: 1
+    CurrentValue: 20
+  - IsCompleted: 0
+    IsRewardTaken: 0
+    CurrentValue: 20
+  - IsCompleted: 0
+    IsRewardTaken: 0
+    CurrentValue: 0
+  - IsCompleted: 0
+    IsRewardTaken: 0
+    CurrentValue: 0
+  - IsCompleted: 0
+    IsRewardTaken: 0
+    CurrentValue: 0
+  Equipment:
+    keyData: 00000000010000000200000003000000
+    valueData: 01000000010000000100000001000000
+  Resources:
+    keyData: 000000000200000003000000010000000400000005000000
+    valueData: ab0000001600000004000000650000000000000000000000
+  PlayerOpenedRecipes: []
+  IsPlayerSeenRecipeItem:
+  - recipe_axe_0_empty
+  - recipe_axe_1
+  - recipe_pickaxe_0_empty
+  - recipe_pickaxe_1
+  - recipe_shovel_0_empty
+  - recipe_shovel_1
+  - recipe_sword_0_empty
+  - recipe_sword_1
+  Inventory:
+    keyData: []
+    valueData: 
+  CurrentHandItemId: 
+  BuildingsSaveData:
+    keyData: 01000000020000000300000004000000
+    valueData:
+    - Status: 2
+      BuildTimeKey: 
+      CurrentLevel: 0
+      IncomeTimes: 2
+    - Status: 0
+      BuildTimeKey: 
+      CurrentLevel: -1
+      IncomeTimes: 0
+    - Status: 0
+      BuildTimeKey: 
+      CurrentLevel: -1
+      IncomeTimes: 0
+    - Status: 0
+      BuildTimeKey: 
+      CurrentLevel: -1
+      IncomeTimes: 0

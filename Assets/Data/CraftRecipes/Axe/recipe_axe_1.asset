@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc886ceb5349029a4639649486f437, type: 3}
+  m_Name: recipe_axe_1
+  m_EditorClassIdentifier: 
+  Id: recipe_axe_1
+  Level: 1
+  Name: 
+  Description: 
+  View:
+    ItemSprite: {fileID: 0}
+    ItemPrefab: {fileID: 1249937343662119907, guid: 2db7e94d39417f64cbdd688b467c2558,
+      type: 3}
+    DropItemPrefab: {fileID: 1249937343662119907, guid: 2db7e94d39417f64cbdd688b467c2558,
+      type: 3}
+    UiDropItemPrefab: {fileID: 1249937343662119907, guid: 2db7e94d39417f64cbdd688b467c2558,
+      type: 3}
+  GettedItem: {fileID: 11400000, guid: 044e88bf500972d43bf8e5d55688deb4, type: 2}
+  NeededItems:
+  - ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 5

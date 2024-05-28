@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc886ceb5349029a4639649486f437, type: 3}
+  m_Name: recipe_shovel_4
+  m_EditorClassIdentifier: 
+  Id: recipe_shovel_4
+  Level: 4
+  Name: 
+  Description: 
+  View:
+    ItemSprite: {fileID: 0}
+    ItemPrefab: {fileID: 5838797675226374804, guid: 2c88116cd753cc84591484267fbaac1e,
+      type: 3}
+    DropItemPrefab: {fileID: 5838797675226374804, guid: 2c88116cd753cc84591484267fbaac1e,
+      type: 3}
+    UiDropItemPrefab: {fileID: 5838797675226374804, guid: 2c88116cd753cc84591484267fbaac1e,
+      type: 3}
+  GettedItem: {fileID: 11400000, guid: aa877ddaad522b74f86f61f070b067af, type: 2}
+  NeededItems:
+  - ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 20
+  - ItemData: {fileID: 11400000, guid: 4ac1b361b1b4e714db10cf998f5d04b1, type: 2}
+    Amount: 3

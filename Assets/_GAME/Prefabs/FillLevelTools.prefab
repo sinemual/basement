@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &765973870466814072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765973870466814055}
+  - component: {fileID: 765973870466814054}
+  m_Layer: 0
+  m_Name: FillLevelTools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &765973870466814055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765973870466814072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765973870466814054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765973870466814072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d6aee278904b74bbaf69ed96cfc47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelFill:
+  - {fileID: 11400000, guid: 367f74089462eb84288c04d2875098d6, type: 2}
+  - {fileID: 11400000, guid: 783664c9e75138c42ac998fd3ca28d5a, type: 2}
+  - {fileID: 11400000, guid: c004996676452b248860e093e15a64c6, type: 2}
+  - {fileID: 11400000, guid: 73d39bdfc1964eb46976c63f3ba10356, type: 2}
+  - {fileID: 11400000, guid: 484eae15359abb74e95b8caa47a66c42, type: 2}
+  - {fileID: 11400000, guid: 043341998558a6e4cb0ff4b29180cb8e, type: 2}
+  - {fileID: 11400000, guid: 88e28b2375af4c7458db82e600e5a174, type: 2}
+  - {fileID: 11400000, guid: 7db23ce51dd800f40bab9d9dd852c433, type: 2}
+  - {fileID: 11400000, guid: 8454a856574db0349970be097f6b237c, type: 2}
+  - {fileID: 11400000, guid: 6bd25227b5a57f04e94280f93b38a45a, type: 2}
+  statFill: []
+  statType: 5
+  baseStat: 0.15
+  coefStat: 1.23

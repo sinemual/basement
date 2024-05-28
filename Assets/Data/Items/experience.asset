@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4756944a971f4939b6625033c71a7368, type: 3}
+  m_Name: experience
+  m_EditorClassIdentifier: 
+  Id: experience
+  Level: 0
+  Name: 
+  Description: 
+  View:
+    ItemSprite: {fileID: 21300000, guid: 42e15165df4ac48488cddb5e0d16cbfd, type: 3}
+    ItemPrefab: {fileID: 0}
+    DropItemPrefab: {fileID: 4547156662363893558, guid: 07d9b7249eb104640be6fca6d573b45e,
+      type: 3}
+    UiDropItemPrefab: {fileID: 4547156662363893558, guid: 07d9b7249eb104640be6fca6d573b45e,
+      type: 3}

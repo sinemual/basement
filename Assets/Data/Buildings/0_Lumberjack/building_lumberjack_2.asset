@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b835e1aa214439946005fcec3eaaa9, type: 3}
+  m_Name: building_lumberjack_2
+  m_EditorClassIdentifier: 
+  Id: building_lumberjack_2
+  Level: 2
+  Type: 1
+  Name: Lumberjack
+  Description: 
+  BuildTimeInSec: 30
+  ProduceTimeInSec: 20
+  ViewSprite: {fileID: 21300000, guid: b02a9641fd4e8d546970a101980ff494, type: 3}
+  GettedCraftRecipes: []
+  NeededItems:
+  - ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 11
+  - ItemData: {fileID: 11400000, guid: 07d87340e8e8dc74fb4bf39a6dce3272, type: 2}
+    Amount: 35
+  - ItemData: {fileID: 11400000, guid: 4ac1b361b1b4e714db10cf998f5d04b1, type: 2}
+    Amount: 6
+  ProductionItem:
+    ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 1

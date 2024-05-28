@@ -1,0 +1,331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04e8a2adc1795e4cb10797b1731cc31, type: 3}
+  m_Name: AudioData
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: 24100000, guid: 4b5f6e38e937b9347be4d0d0bd41576d, type: 2}
+  sfxMixer: {fileID: 24100000, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+  sounds:
+  - name: bow_hit
+    clip: {fileID: 8300000, guid: 4aeb98fb42e41cf48a3968ddb2fb88de, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: explode
+    clip: {fileID: 8300000, guid: a763899478f0f6049900fd46082ace47, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: tnt_fuse
+    clip: {fileID: 8300000, guid: 1cf8151a14df9394e94283b452abf38c, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.119
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: sword_hit
+    clip: {fileID: 8300000, guid: 4aeb98fb42e41cf48a3968ddb2fb88de, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 0.78
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: chest_open
+    clip: {fileID: 8300000, guid: e4594efe8a9d94f42ac3ca196b7202d6, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: craft
+    clip: {fileID: 8300000, guid: 480369f7aa5ce1944a159343979bc153, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.299
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: pickup
+    clip: {fileID: 8300000, guid: 01fc5702fe19a22449c9c8a7e8ef0f3f, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.159
+    volumeVariance: 0.14
+    pitch: 1
+    pitchVariance: 0.173
+    loop: 0
+    source: {fileID: 0}
+  - name: drop
+    clip: {fileID: 8300000, guid: e124c7724fadc064b92eb327bc529323, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.272
+    volumeVariance: 0.134
+    pitch: 0.32
+    pitchVariance: 0.156
+    loop: 0
+    source: {fileID: 0}
+  - name: item_broken
+    clip: {fileID: 8300000, guid: 5befe73517339ec438a1761062ca7199, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.259
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: mine_done
+    clip: {fileID: 8300000, guid: c31f58e02e5c9f24896e43e9468ae8a3, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.243
+    volumeVariance: 0.1
+    pitch: 0.6
+    pitchVariance: 0.025
+    loop: 0
+    source: {fileID: 0}
+  - name: ui_click
+    clip: {fileID: 8300000, guid: 589ea7a34e4eb8848b0e2026a3a222b8, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.75
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: camera_rotate
+    clip: {fileID: 8300000, guid: 1540de1c7119dae418f2c082cfd190dc, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.231
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: experience
+    clip: {fileID: 8300000, guid: 384828df5fe25b04f91cf3aa036c52e8, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.063
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.217
+    loop: 0
+    source: {fileID: 0}
+  - name: build
+    clip: {fileID: 8300000, guid: 05e076386de1caf43bfa71262bd22b6c, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.482
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: chest_fly
+    clip: {fileID: 8300000, guid: 283095e6d7b1a044b9f01bbc1a29f52d, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.344
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: dragon_fly
+    clip: {fileID: 8300000, guid: 42de089b5656f724b8ba4301e1745c47, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.295
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: level_complete
+    clip: {fileID: 8300000, guid: 5c21a3986501c514eb73b078e9202519, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.226
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: level_up
+    clip: {fileID: 8300000, guid: 022eb53343914424ab4d9568f5d4b238, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.177
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: burning_village
+    clip: {fileID: 8300000, guid: 81e020269ea678443ba2db20063ea525, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.287
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: villager_hmm
+    clip: {fileID: 8300000, guid: 81fb96399297b6241bebeb562592410a, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 1
+    volumeVariance: 0.1
+    pitch: 1.2
+    pitchVariance: 0.15
+    loop: 0
+    source: {fileID: 0}
+  - name: dragon_theme
+    clip: {fileID: 8300000, guid: 835be327de4cb7a4cab59d2af41b51d4, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.607
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  soundtrackSounds:
+  - name: ost_1
+    clip: {fileID: 8300000, guid: e6c699585e8b573448bb411b1a445d62, type: 3}
+    mixer: {fileID: 24300002, guid: 4b5f6e38e937b9347be4d0d0bd41576d, type: 2}
+    volume: 0.52
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  ambientSounds:
+  - name: earth_ambient
+    clip: {fileID: 8300000, guid: 430ccf7a4ad0c4b4faae2fef69bab862, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.607
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: hell_ambient
+    clip: {fileID: 8300000, guid: 34c43c8cd9fadab499b09c30dca4c2e8, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.385
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    source: {fileID: 0}
+  miningSounds:
+  - name: mining_stone
+    clip: {fileID: 8300000, guid: 95fb7ce494f930f4ba0f3a520fdef639, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.3
+    volumeVariance: 0.227
+    pitch: 1
+    pitchVariance: 0.196
+    loop: 0
+    source: {fileID: 0}
+  hitSounds:
+  - name: hit_skeleton
+    clip: {fileID: 8300000, guid: 741d1eb30a456694681932fdacfb8075, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.153
+    volumeVariance: 0.1
+    pitch: 1.46
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: hit_zombie
+    clip: {fileID: 8300000, guid: 3cd79d8e183d583469c3c26bd33a7ad7, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.256
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: hit_heller
+    clip: {fileID: 8300000, guid: e3170da3af7e2944fa7f749d8c4c5732, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.691
+    volumeVariance: 0.1
+    pitch: 0.56
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  attackSounds:
+  - name: attack_skeleton
+    clip: {fileID: 8300000, guid: dbe05135b498b5a41a0190da62a96413, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.248
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: attack_heller
+    clip: {fileID: 8300000, guid: 28c410227f109304d99035be5737c05d, type: 3}
+    mixer: {fileID: 24300002, guid: b0688f55c3611254b9922ef096f1ce4a, type: 2}
+    volume: 0.822
+    volumeVariance: 0.1
+    pitch: 0.79
+    pitchVariance: 0.157
+    loop: 0
+    source: {fileID: 0}
+  MiningByType:
+    keyData: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+    valueData:
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+    - mining_stone
+  HitByType:
+    keyData: 0100000002000000000000000300000007000000
+    valueData:
+    - hit_skeleton
+    - hit_zombie
+    - sword_hit
+    - hit_zombie
+    - hit_heller
+  AttackByType:
+    keyData: 0700000001000000
+    valueData:
+    - attack_heller
+    - attack_skeleton
+  AmbientByType:
+    keyData: 0200000003000000040000000000000001000000050000000600000007000000
+    valueData:
+    - earth_ambient
+    - earth_ambient
+    - hell_ambient
+    - earth_ambient
+    - earth_ambient
+    - hell_ambient
+    - earth_ambient
+    - earth_ambient

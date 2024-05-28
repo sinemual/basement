@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fc886ceb5349029a4639649486f437, type: 3}
+  m_Name: recipe_pickaxe_1
+  m_EditorClassIdentifier: 
+  Id: recipe_pickaxe_1_wood
+  Level: 1
+  Name: 
+  Description: 
+  View:
+    ItemSprite: {fileID: 0}
+    ItemPrefab: {fileID: 2209450992150090007, guid: 8dbadd21d1726c84ca44c43551b08a2d,
+      type: 3}
+    DropItemPrefab: {fileID: 2209450992150090007, guid: 8dbadd21d1726c84ca44c43551b08a2d,
+      type: 3}
+    UiDropItemPrefab: {fileID: 2209450992150090007, guid: 8dbadd21d1726c84ca44c43551b08a2d,
+      type: 3}
+  GettedItem: {fileID: 11400000, guid: aa8da9a061e6f144cadf8c045c1419bb, type: 2}
+  NeededItems:
+  - ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 5

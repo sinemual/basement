@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8333afd65408fbc272ad0e20e5340, type: 3}
+  m_Name: item_chest_4_hell
+  m_EditorClassIdentifier: 
+  Id: item_chest_4_hell
+  Level: 4
+  Name: COMMON CHEST
+  Description: 
+  View:
+    ItemSprite: {fileID: 3817453074810576489, guid: 6cd2fd8a9fa5a6d4693557335f209f3a,
+      type: 3}
+    ItemPrefab: {fileID: 2222879191238976181, guid: 2b1afdc5441057941a26afa75a1a71e0,
+      type: 3}
+    DropItemPrefab: {fileID: 2222879191238976181, guid: 2b1afdc5441057941a26afa75a1a71e0,
+      type: 3}
+    UiDropItemPrefab: {fileID: 0}
+  Loot:
+  - ItemData: {fileID: 11400000, guid: 2a9ecb0ae72f79c4e8eefea025fcc63b, type: 2}
+    Amount: 1
+    Chance: 3
+  - ItemData: {fileID: 11400000, guid: 4ac1b361b1b4e714db10cf998f5d04b1, type: 2}
+    Amount: 5
+    Chance: 10

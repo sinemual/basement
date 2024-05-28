@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8333afd65408fbc272ad0e20e5340, type: 3}
+  m_Name: item_chest_1_field
+  m_EditorClassIdentifier: 
+  Id: item_chest_1_field
+  Level: 1
+  Name: COMMON CHEST
+  Description: 
+  View:
+    ItemSprite: {fileID: 3817453074810576489, guid: 6cd2fd8a9fa5a6d4693557335f209f3a,
+      type: 3}
+    ItemPrefab: {fileID: 2222879191238976181, guid: 2b1afdc5441057941a26afa75a1a71e0,
+      type: 3}
+    DropItemPrefab: {fileID: 2222879191238976181, guid: 2b1afdc5441057941a26afa75a1a71e0,
+      type: 3}
+    UiDropItemPrefab: {fileID: 0}
+  Loot:
+  - ItemData: {fileID: 11400000, guid: 17b129027b9f6844297a9aa1f3099378, type: 2}
+    Amount: 10
+    Chance: 80
+  - ItemData: {fileID: 11400000, guid: 07d87340e8e8dc74fb4bf39a6dce3272, type: 2}
+    Amount: 10
+    Chance: 80

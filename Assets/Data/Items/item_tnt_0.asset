@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3700e1d5eb224d1d85ef6d66e11e8419, type: 3}
+  m_Name: item_tnt_0
+  m_EditorClassIdentifier: 
+  Id: item_tnt_0
+  Level: 0
+  Name: 
+  Description: 
+  View:
+    ItemSprite: {fileID: 21300000, guid: 83f345216c5f0c24296f13264850357e, type: 3}
+    ItemPrefab: {fileID: 5063385296178452010, guid: 81df9ee2e78b5f845ba5ce44ba659f6f,
+      type: 3}
+    DropItemPrefab: {fileID: 5063385296178452010, guid: dc23fa291e40b0944834c11095ad45f1,
+      type: 3}
+    UiDropItemPrefab: {fileID: 7480792235521528365, guid: 6613acce2aa1d2d4a9699e7ba8188f3f,
+      type: 3}
+  ExplosionRadius: 2
+  Stats:
+    keyData: 060000000800000005000000
+    valueData:
+    - 17
+    - 5
+    - 5
