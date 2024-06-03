@@ -7,8 +7,7 @@
         OnLevel = 2,
         Village = 3,
         GlobalMap = 4,
-        GameOver = 5,
-        LevelComplete = 6,
-        SceneBurningVillage = 7
+        Battle = 5,
+        
     }
 }

@@ -47,7 +47,6 @@ namespace Client
                     }
                 }
 
-
                 foreach (var spawn in _spawnFilter)
                 {
                     if (_spawnFilter.Get1(spawn).Prefab.TryGetComponent(out CharacterMonoProvider characterMonoProvider))

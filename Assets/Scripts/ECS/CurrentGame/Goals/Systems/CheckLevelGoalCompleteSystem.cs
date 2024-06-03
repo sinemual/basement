@@ -58,7 +58,7 @@ namespace Client
             {
                 if (_data.RuntimeData.CurrentGoal.Type == GoalType.FindTheChest)
                 {
-                    _data.RuntimeData.CurrentGameState = GameState.LevelComplete;
+                    //_data.RuntimeData.CurrentGameState = GameState.LevelComplete;
                     AddProgressToGoalAndCheck();
                 }
             }

@@ -39,7 +39,7 @@ namespace Client
             {
                 _world.NewEntity().Get<AddResourceRequest>() = new AddResourceRequest()
                 {
-                    Type = ResourceType.Stick,
+                    Type = ResourceType.Wood,
                     Amount = 20
                 };
                 _world.NewEntity().Get<AddResourceRequest>() = new AddResourceRequest()
@@ -51,33 +51,16 @@ namespace Client
                 _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.OpenBuildScreen;
             }
 
-            if (_data.RuntimeData.CurrentGameState == GameState.LevelComplete)
-            {
-                if (_data.PlayerData.EventLevelIndex == 9)
-                    if (!_data.PlayerData.TutrorialStates[TutorialStep.GoToMeta2])
-                    {
-                        _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.GoToMeta2;
-                        _ui.LevelCompleteScreen.SetShowState(false);
-                    }
-                
-                if (_data.PlayerData.EventLevelIndex == 4)
-                    if (!_data.PlayerData.TutrorialStates[TutorialStep.GoToMeta])
-                    {
-                        _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.GoToMeta;
-                        _ui.LevelCompleteScreen.SetShowState(false);
-                    }
-            }
-
             if (_data.RuntimeData.CurrentGameState == GameState.OnLevel)
             {
                 if (_data.PlayerData.EventLevelIndex == 0)
                     if (!_data.PlayerData.TutrorialStates[TutorialStep.Mining])
                     {
                         _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.Mining;
-                        _ui.CameraControlScreen.SetShowState(false);
+                        //_ui.CameraControlScreen.SetShowState(false);
                         _ui.OpenCraftScreen.SetShowState(false);
                         _ui.CraftScreen.SetShowState(false);
-                        _ui.OpenExitFromLevelScreen.SetShowState(false);
+                       // _ui.OpenExitFromLevelScreen.SetShowState(false);
                     }
                     else
                     {
@@ -90,7 +73,7 @@ namespace Client
                     if (!_data.PlayerData.TutrorialStates[TutorialStep.GoToTheNextLevel])
                     {
                         _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.GoToTheNextLevel;
-                        _ui.LevelCompleteScreen.SetShowState(false);
+                        //_ui.LevelCompleteScreen.SetShowState(false);
                     }
 
                 if (_data.PlayerData.EventLevelIndex == 1)
@@ -101,19 +84,19 @@ namespace Client
                         
                         _world.NewEntity().Get<AddResourceRequest>() = new AddResourceRequest()
                         {
-                            Type = ResourceType.Stick,
+                            Type = ResourceType.Wood,
                             Amount = 10
                         };
                         
                         _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.CraftPickaxe;
-                        _ui.CameraControlScreen.SetShowState(false);
+                        //_ui.CameraControlScreen.SetShowState(false);
                     }
 
                 if (_data.PlayerData.EventLevelIndex == 2)
                     if (!_data.PlayerData.TutrorialStates[TutorialStep.Combat])
                     {
                         _world.NewEntity().Get<StartTutorialRequest>().TutorialStep = TutorialStep.Combat;
-                        _ui.CameraControlScreen.SetShowState(false);
+                        //_ui.CameraControlScreen.SetShowState(false);
                     }
                     else
                     {

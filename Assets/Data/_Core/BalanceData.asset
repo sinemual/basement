@@ -26,14 +26,14 @@ MonoBehaviour:
   BaseLevelReward: 100
   LevelMultiCoef: 1.19
   LevelBaseCoef: 10
-  LevelDoneExperienceCoef: 0.4
+  LevelDoneExperienceCoef: 1000
   StartFlyRandomTime: 10
   EndFlyRandomTime: 20
   FlyRandomChance: 0.6
   PushForceCoef: 2
   DeadForceCoef: 8
   PushForceUpCoef: 110
-  LinePoints: 2
+  LinePoints: 6
   TimeBetweenPoints: 0.7
   ThrowStrength: 13
   ThrowMass: 1

@@ -16,23 +16,24 @@ namespace Client
         {
             _data.RuntimeData.ResetLevelData();
             
+            _data.RuntimeData.CurrentGameState = GameState.OnLevel;
+            _ui.ChooseItemScreen.SetShowState(true);
             //game state
-            if (_data.PlayerData.IsMechanicsTutorialComplete)
+            /*if (_data.PlayerData.IsMechanicsTutorialComplete)
             {
-                _data.RuntimeData.CurrentGameState = GameState.OnLevel;
-                _ui.ChooseItemScreen.SetShowState(true);
-            }
-            
-            else if (_data.PlayerData.IsMechanicsTutorialComplete && !_data.PlayerData.IsMetaTutorialComplete)
+                
+            }*/
+            /*else if (_data.PlayerData.IsMechanicsTutorialComplete && !_data.PlayerData.IsMetaTutorialComplete)
                 _data.RuntimeData.CurrentGameState = GameState.Village;
             else if (!_data.PlayerData.IsMechanicsTutorialComplete && !_data.PlayerData.IsMetaTutorialComplete)
             {
                 _data.PlayerData.OpenLocations[LocationType.Tutorial] = true;
                 _data.RuntimeData.CurrentLocationType = LocationType.Tutorial;
                 _world.NewEntity().Get<SpawnLevelRequest>();
-            }
+            }*/
 
             _world.NewEntity().Get<CheckGoalStateEvent>();
+            _world.NewEntity().Get<SpawnLevelRequest>();
             //ui
             _ui.OpenSettingScreen.SetShowState(true);
                // _ui.OpenInventoryScreen.SetShowState(true);

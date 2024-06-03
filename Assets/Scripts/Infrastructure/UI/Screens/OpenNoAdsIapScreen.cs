@@ -8,7 +8,7 @@ public class OpenNoAdsIapScreen : BaseScreen
     {
         openNoAdsIapScreenButton.OnClickEvent.AddListener(() =>
         {
-            GameUi.NoAdsIapScreen.SetShowState(true);
+            //GameUi.NoAdsIapScreen.SetShowState(true);
             SetShowState(false);
         });
     }

@@ -10,7 +10,7 @@ public class OpenGameProgressScreen : BaseScreen
         showGameProgressScreenButton.OnClickEvent.AddListener(() =>
         {
             GameUi.AudioService.Play(Sounds.UiClickSound);
-            GameUi.GameProgressScreen.SetShowState(true);
+           // GameUi.GameProgressScreen.SetShowState(true);
             GameUi.EventBus.OpenGameProgressScreen.OnGameProgressScreenButtonTap();
         });
     }

@@ -39,13 +39,9 @@ namespace Client
                     _data.SceneData.GlobalMap.SetActive(false);
                     _ui.GlobalMapScreen.SetShowState(false);
                     _ui.VillageScreen.SetShowState(true);
-                    _ui.CameraControlScreen.SetShowState(false);
                     _ui.GoalScreen.SetShowState(true);
-                    //_ui.CraftScreen.SetShowState(false);
                     _ui.OpenCraftScreen.SetShowState(false);
-                    _ui.OpenExitFromLevelScreen.SetShowState(false);
                     _ui.OpenTntPickaxeBoosterScreen.SetShowState(false);
-                    _ui.OpenNoAdsIapScreen.SetShowState(false);
                     _ui.BoosterFeelingScreen.SetShowState(false);
                     _cameraService.SetCamera(CameraType.VillageCamera, null, null);
                     _audioService.StopAllAmbient();
@@ -60,13 +56,10 @@ namespace Client
 
                     _ui.GoalScreen.SetShowState(true);
                     _ui.GlobalMapScreen.SetShowState(true);
-                    _ui.OpenNoAdsIapScreen.SetShowState(true);
                     _ui.VillageScreen.SetShowState(false);
-                    _ui.CameraControlScreen.SetShowState(false);
                     _ui.OpenTntPickaxeBoosterScreen.SetShowState(false);
                     _ui.CraftScreen.SetShowState(false);
                     _ui.OpenCraftScreen.SetShowState(false);
-                    _ui.OpenExitFromLevelScreen.SetShowState(false);
                     _ui.BoosterFeelingScreen.SetShowState(false);
                     _ui.GlobalMapScreen.GoToVillageButton.gameObject.SetActive(_data.PlayerData.TutrorialStates[TutorialStep.GoToMeta2]);
                     _cameraService.SetCamera(CameraType.GlobalMapCamera, null, null);
@@ -79,45 +72,9 @@ namespace Client
                     _data.SceneData.Village.SetActive(false);
                     _data.SceneData.GlobalMap.SetActive(false);
 
-                    if (_data.PlayerData.EventLevelIndex > 9)
-                        _ui.OpenExitFromLevelScreen.SetShowState(true);
                     _ui.GoalScreen.SetShowState(false);
                     _ui.GlobalMapScreen.SetShowState(false);
-                    
                     _ui.VillageScreen.SetShowState(false);
-                    _ui.OpenNoAdsIapScreen.SetShowState(false);
-                }
-
-                if (_data.RuntimeData.CurrentGameState == GameState.LevelComplete)
-                {
-                    Debug.Log($"_ui.BoosterFeelingScreen.SetShowState(false);");
-                    _ui.BoosterFeelingScreen.SetShowState(false);
-                }
-
-                if (_data.RuntimeData.CurrentGameState == GameState.SceneBurningVillage)
-                {
-                    _world.NewEntity().Get<DisposeLevelRequest>();
-                    _data.SceneData.Village.SetActive(false);
-                    _data.SceneData.GlobalMap.SetActive(false);
-                    _data.SceneData.SceneBurningVillage.SetActive(true);
-
-                    _ui.GlobalMapScreen.SetShowState(false);
-                    _ui.VillageScreen.SetShowState(false);
-                    _ui.OpenNoAdsIapScreen.SetShowState(false);
-                    _ui.CameraControlScreen.SetShowState(false);
-                    _ui.GameProgressScreen.SetShowState(false);
-                    _ui.OnLevelScreen.SetShowState(false);
-                    _ui.OpenSettingScreen.SetShowState(false);
-                    _ui.GoalScreen.SetShowState(false);
-                    _ui.OpenCraftScreen.SetShowState(false);
-                    _ui.OpenExitFromLevelScreen.SetShowState(false);
-                    _ui.PlayerStatusScreen.SetShowState(false);
-                    _ui.BoosterFeelingScreen.SetShowState(false);
-                    _cameraService.SetCamera(CameraType.VillageCamera, null, null);
-                    _audioService.StopAllAmbient();
-                    _audioService.Stop(Sounds.FirstOstSound);
-                    _audioService.Play(Sounds.DragonTheme);
-                    _analyticService.LogEvent("play_scene_burning_village");
                 }
             }
         }

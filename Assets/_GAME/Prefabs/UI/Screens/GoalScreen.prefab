@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4933730491750509246}
   - {fileID: 4982076929189925015}
@@ -35,10 +36,10 @@ RectTransform:
   m_Father: {fileID: 1366168197846233958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8384659}
-  m_AnchorMax: {x: 0, y: 0.8384659}
-  m_AnchoredPosition: {x: 161.35999, y: 17.283691}
-  m_SizeDelta: {x: 322.7104, y: 184.2866}
+  m_AnchorMin: {x: 0, y: 0.813}
+  m_AnchorMax: {x: 0, y: 0.813}
+  m_AnchoredPosition: {x: 161.35999, y: 0}
+  m_SizeDelta: {x: 322.7104, y: 183.2866}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2923514029051050167
 CanvasRenderer:
@@ -106,6 +107,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1261390912507258012}
   m_Father: {fileID: 721621465074081873}
@@ -144,8 +146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8016247766738197590, guid: b082dae9ed3aaf441b3f547ba7594b8f,
-    type: 3}
+  m_Sprite: {fileID: -8016247766738197590, guid: b082dae9ed3aaf441b3f547ba7594b8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -187,6 +188,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2808113544770864701}
   m_Father: {fileID: 721621465074081873}
@@ -225,8 +227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6442759165207783438, guid: b082dae9ed3aaf441b3f547ba7594b8f,
-    type: 3}
+  m_Sprite: {fileID: 6442759165207783438, guid: b082dae9ed3aaf441b3f547ba7594b8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -297,7 +298,7 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
 --- !u!95 &8900729275687618950
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -310,10 +311,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4376192313758876695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +363,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4982076929189925015}
   m_RootOrder: 0
@@ -400,8 +404,7 @@ MonoBehaviour:
   m_text: GET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd4c899a36982ef43a3423714ce3b989, type: 2}
-  m_sharedMaterial: {fileID: 7378615176919345418, guid: dd4c899a36982ef43a3423714ce3b989,
-    type: 2}
+  m_sharedMaterial: {fileID: 7378615176919345418, guid: dd4c899a36982ef43a3423714ce3b989, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -495,6 +498,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721621465074081873}
   m_RootOrder: 0
@@ -536,9 +540,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14722eee374833348bbc38e0ed35fc19, type: 2}
-  m_sharedMaterial: {fileID: 6164226912216212864, guid: 14722eee374833348bbc38e0ed35fc19,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f22d11711efbe904991579a58d17ba99, type: 2}
+  m_sharedMaterial: {fileID: 6164226912216212864, guid: 14722eee374833348bbc38e0ed35fc19, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -601,7 +604,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8587669469914148647
@@ -625,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1366168197846233958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -636,6 +639,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 721621465074081873}
   m_Father: {fileID: 0}
@@ -656,7 +660,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &4009700805607600754
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -669,10 +673,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!223 &3170865593412255141
 Canvas:
   m_ObjectHideFlags: 0
@@ -729,10 +735,8 @@ MonoBehaviour:
   OnShowScreen:
     m_PersistentCalls:
       m_Calls: []
-  backgroundRewardSprite: {fileID: -5646352971795681265, guid: b082dae9ed3aaf441b3f547ba7594b8f,
-    type: 3}
-  readyRewardSprite: {fileID: 6169190223158931066, guid: b082dae9ed3aaf441b3f547ba7594b8f,
-    type: 3}
+  backgroundRewardSprite: {fileID: -5646352971795681265, guid: b082dae9ed3aaf441b3f547ba7594b8f, type: 3}
+  readyRewardSprite: {fileID: 6169190223158931066, guid: b082dae9ed3aaf441b3f547ba7594b8f, type: 3}
   gameProgressStepView: {fileID: 5265567174858565440}
 --- !u!114 &5265567174858565440
 MonoBehaviour:
@@ -779,6 +783,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8455730465166688002}
   m_RootOrder: 0

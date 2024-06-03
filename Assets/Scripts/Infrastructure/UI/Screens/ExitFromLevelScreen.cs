@@ -16,7 +16,7 @@ public class ExitFromLevelScreen : BaseScreen
         
         continueLevelButton.OnClickEvent.AddListener(() =>
         {
-            GameUi.OpenExitFromLevelScreen.SetShowState(true);
+            //GameUi.OpenExitFromLevelScreen.SetShowState(true);
             SetShowState(false);
         });
     }

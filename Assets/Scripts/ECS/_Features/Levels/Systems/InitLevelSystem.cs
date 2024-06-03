@@ -78,9 +78,9 @@ namespace Client
 
         private void UiSetup()
         {
-            _ui.CameraControlScreen.SetShowState(true);
+            //_ui.CameraControlScreen.SetShowState(true);
             _ui.OnLevelScreen.SetShowState(true);
-            _ui.PlayerStatusScreen.SetShowState(true);
+            //_ui.PlayerStatusScreen.SetShowState(true);
             //_ui.OpenInventoryScreen.SetShowState(true);
             _ui.OpenCraftScreen.SetShowState(false);
             _ui.OpenTntPickaxeBoosterScreen.SetShowState(false);

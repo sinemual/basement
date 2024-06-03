@@ -131,7 +131,7 @@ namespace Client
                 //---General---
                 .Add(userInterfaceSystems)
                 .Add(timerSystems)
-                .Add(new FirebaseConfigSystem())
+                //.Add(new FirebaseConfigSystem())
                 .Add(new ShortcutCheatSystem())
                 .Add(new RestartGameSystem())
                 .Add(new InitGameSystem())
@@ -144,11 +144,10 @@ namespace Client
                 .Add(new RagdollSystem())
                 //---Throw---
                 //.Add(new TakeThrowItemSystem())
-                //.Add(new InputJoystickSystem())
-                //.Add(new InputThrowSystem())
-                //.Add(new ThrowTrajectorySystem())
-                //.Add(new ThrowSystem())
-                //.Add(new ItemArcanoidSystem())
+                .Add(new InputJoystickSystem())
+                .Add(new InputThrowSystem())
+                .Add(new ThrowTrajectorySystem())
+                .Add(new ThrowSystem())
                 .Add(spawnSystems)
                 .Add(movementSystems)
                 //------GLOBAL MAP------
@@ -165,7 +164,7 @@ namespace Client
                 .Add(new InteractVillagerSystem())
                 //------LEVELS------
                 .Add(new InitLevelSystem())
-                .Add(new CalculateExperienceLevelSystem())
+                //.Add(new CalculateExperienceLevelSystem())
                 //---Init---
                 .Add(new InitBlockSystem())
                 .Add(new CraftSystem())
@@ -181,8 +180,6 @@ namespace Client
                 .Add(new EquipItemSystem())
                 .Add(new EquipHandItemSystem())
                 .Add(new RecalculateStatsSystem())
-                .Add(new PlayerTakeDamageSystem())
-                .Add(new PlayerDeathSystem())
                 //---Items---
                 .Add(new CreateDragItemSystem())
                 .Add(new UiDragAndDropSystem())
@@ -226,12 +223,12 @@ namespace Client
                 .Add(new CalculateResourceSystem())
                 .Add(new CheckProgressGoalCompleteSystem())
                 //---Tutorial---
-                .Add(new CheckProgressTutorialSystem())
-                .Add(new TutorialSystem())
-                .Add(new StartTutorialSystem())
+                //.Add(new CheckProgressTutorialSystem())
+                //.Add(new TutorialSystem())
+                //.Add(new StartTutorialSystem())
                 //---GlobalMap2---
                 .Add(new OpenLocationGlobalMapSystem())
-                .Add(new ShowRateUsPopupSystem())
+                //.Add(new ShowRateUsPopupSystem())
                 //---Events---
                 .Add(new CatchEventSystem())
                 //---OneFrames---

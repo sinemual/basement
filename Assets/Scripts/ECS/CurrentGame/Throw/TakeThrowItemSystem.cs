@@ -20,7 +20,6 @@ namespace Client
             {
                 Transform startPoint = _trajectoryFilter.GetEntity(0).Get<ThrowTrajectoryProvider>().StartPoint;
                 EcsEntity entity = _prefabFactory.Spawn(itemData.View.DropItemPrefab, startPoint.position, startPoint.rotation, startPoint);
-                entity.Get<ThrowItem>().Value = itemData;
                 entity.Get<ReadyMarker>();
             };
         }

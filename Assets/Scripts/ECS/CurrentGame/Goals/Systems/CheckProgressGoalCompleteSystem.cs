@@ -45,7 +45,7 @@ namespace Client
                                 {
                                     _analyticService.LogEventWithParameter("progress_goal_complete", goalData.GoalDescriptionText);
                                     _data.PlayerData.GameProgressData[_data.PlayerData.GameProgressStep].IsCompleted = true;
-                                    _ui.GameProgressScreen.UpdateScreen();
+                                    //_ui.GameProgressScreen.UpdateScreen();
                                     _world.NewEntity().Get<ProgressGoalCompleteEvent>().Type = goalData.Type;
                                 }
                             }

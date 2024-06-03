@@ -31,7 +31,7 @@ namespace Client
                 _cameraService.Shake();
                 _analyticService.LogEvent("player_death");
                 
-                _ui.LevelFailedScreen.SetShowState(true);
+               // _ui.LevelFailedScreen.SetShowState(true);
 
                 foreach (var shooter in _shootersFilter)
                 {

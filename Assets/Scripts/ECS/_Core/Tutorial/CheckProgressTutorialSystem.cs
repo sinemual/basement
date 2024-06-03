@@ -64,7 +64,7 @@ namespace Client
                     !_data.PlayerData.TutrorialStates[TutorialStep.GoToTheNextLevel])
                 {
                     _world.NewEntity().Get<CompleteTutorialRequest>().TutorialStep = _data.PlayerData.CurrentTutorialStep;
-                    _ui.LevelCompleteScreen.SetShowState(false);
+                    //_ui.LevelCompleteScreen.SetShowState(false);
                 }
             };
             
@@ -108,7 +108,7 @@ namespace Client
                 {
                     _world.NewEntity().Get<CompleteTutorialRequest>().TutorialStep = _data.PlayerData.CurrentTutorialStep;
                     _ui.Tutorials[TutorialStep.TakeGameProgressReward].SetShowState(false);
-                    _ui.GameProgressScreen.SetShowState(false);
+                    //_ui.GameProgressScreen.SetShowState(false);
                 }
             };
         }

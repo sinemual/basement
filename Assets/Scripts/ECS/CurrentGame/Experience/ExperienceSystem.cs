@@ -36,10 +36,10 @@ namespace Client.ECS.CurrentGame.Experience
                     if ((int)_data.RuntimeData.CurrentLevelExperience >= _data.RuntimeData.NeededLevelExperience)
                     {
                         _data.RuntimeData.IsCurrentLevelCompleted = true;
-                        _data.RuntimeData.CurrentGameState = GameState.LevelComplete;
+                        //_data.RuntimeData.CurrentGameState = GameState.LevelComplete;
                         _analyticService.LogEvent("level_complete");
                         _audioService.Play(Sounds.LevelComplete);
-                        _ui.LevelCompleteScreen.SetShowState(true);
+                        //_ui.LevelCompleteScreen.SetShowState(true);
                         _world.NewEntity().Get<LevelCompleteEvent>();
                     }
                 

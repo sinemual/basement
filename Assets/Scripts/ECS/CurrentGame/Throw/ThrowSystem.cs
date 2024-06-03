@@ -11,7 +11,7 @@ namespace Client
         private GameUI _ui;
 
         private EcsFilter<ThrowTrajectoryProvider, ThrowRequest> _requestFilter;
-        private EcsFilter<ThrowItem, ReadyMarker> _itemFilter;
+        //private EcsFilter<ThrowItem, ReadyMarker> _itemFilter;
 
         public void Run()
         {
@@ -20,7 +20,7 @@ namespace Client
                 ref var entity = ref _requestFilter.GetEntity(request);
                 ref var startPoint = ref entity.Get<ThrowTrajectoryProvider>().StartPoint;
                 
-                foreach (var item in _itemFilter)
+                /*foreach (var item in _itemFilter)
                 {
                     ref var itemEntity = ref _itemFilter.GetEntity(item);
                     ref var itemRb = ref itemEntity.Get<RigidbodyProvider>().Value;
@@ -29,7 +29,7 @@ namespace Client
                     itemRb.isKinematic = false;
                     itemRb.AddForce(startPoint.forward * 10.0f, ForceMode.VelocityChange);
                     itemEntity.Del<ReadyMarker>();
-                }
+                }*/
                 entity.Del<ThrowRequest>();
             }
         }

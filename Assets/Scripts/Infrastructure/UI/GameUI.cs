@@ -14,28 +14,18 @@ public class GameUI : MonoBehaviour
     public OpenSettingScreen OpenSettingScreen;
     public OpenCraftScreen OpenCraftScreen;
     public OpenLevelCompleteScreen OpenLevelCompleteScreen;
-    public OpenExitFromLevelScreen OpenExitFromLevelScreen;
-    public ExitFromLevelScreen ExitFromLevelScreen;
     public BoosterFeelingScreen BoosterFeelingScreen;
-    public RateUsScreen RateUsScreen;
-    public NoAdsIapScreen NoAdsIapScreen;
-    public OpenNoAdsIapScreen OpenNoAdsIapScreen;
-    //public OpenGameProgressScreen OpenGameProgressScreen;
     public OpenTntPickaxeBoosterScreen OpenTntPickaxeBoosterScreen;
     public TntPickaxeBoosterScreen TntPickaxeBoosterScreen;
-    public PlayerStatusScreen PlayerStatusScreen;
     public SettingScreen SettingScreen;
     public GoalScreen GoalScreen;
     public CheatScreen CheatScreen;
     //public LoadingScreen LoadingScreen;
-    public LevelCompleteScreen LevelCompleteScreen;
-    public LevelFailedScreen LevelFailedScreen;
     //public OpenInventoryScreen OpenInventoryScreen;
     public InventoryScreen InventoryScreen;
     public ResourceScreen ResourceScreen;
     public PlayerDamageFeelingScreen PlayerDamageFeelingScreen;
     public OnLevelScreen OnLevelScreen;
-    public GameProgressScreen GameProgressScreen;
     public VillageScreen VillageScreen;
     public GlobalMapScreen GlobalMapScreen;
     public HandItemScreen HandItemScreen;
@@ -44,7 +34,6 @@ public class GameUI : MonoBehaviour
     public BuildScreen BuildScreen;
     //public GetItemScreen GetItemScreen;
     public ChestScreen ChestScreen;
-    public CameraControlScreen CameraControlScreen;
     
     [Header("Tutorials")] 
     public TutorialScreens Tutorials;

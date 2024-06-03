@@ -10,8 +10,8 @@ public class OpenLevelCompleteScreen : BaseScreen
         showLevelCompleteScreenButton.OnClickEvent.AddListener(() =>
         {
             GameUi.AudioService.Play(Sounds.UiClickSound);
-            GameUi.LevelCompleteScreen.SetShowState(true);
-            SharedData.RuntimeData.CurrentGameState = GameState.LevelComplete;
+            //GameUi.LevelCompleteScreen.SetShowState(true);
+            //SharedData.RuntimeData.CurrentGameState = GameState.LevelComplete;
         });
     }
 }

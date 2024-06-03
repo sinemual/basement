@@ -40,8 +40,7 @@ namespace Client.ECS.CurrentGame.Mining
                     .SetEase(Ease.InBounce).SetLink(block.Model);
 
                 CreateMiningVFX(block.Model.transform, block.Type);
-                if (_data.PlayerData.Equipment[block.MineEquipType] > 0)
-                    CreateMiningAnimView(block.Model.transform, block.MineEquipType);
+                CreateMiningAnimView(block.Model.transform, EquipType.Pickaxe);
 
                 _vibrationService.Vibrate(stats.Value[StatType.Health] <= 0 ? NiceHaptic.PresetType.SoftImpact : NiceHaptic.PresetType.RigidImpact);
                 _audioService.Play(stats.Value[StatType.Health] <= 0 ? Sounds.MineDoneSound : _data.AudioData.MiningByType[block.Type]);

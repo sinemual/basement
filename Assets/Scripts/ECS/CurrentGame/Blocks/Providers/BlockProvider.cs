@@ -9,5 +9,4 @@ public struct BlockProvider
     public BlockType Type;
     public int Level;
     public GameObject Model;
-    public EquipType MineEquipType;
 }

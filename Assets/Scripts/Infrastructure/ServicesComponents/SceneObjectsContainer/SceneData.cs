@@ -11,5 +11,4 @@ public class SceneData : MonoBehaviour
     public GameObject GlobalMap;
     public GameObject SceneBurningVillage;
     public GameObject LoadingUi;
-    
 }

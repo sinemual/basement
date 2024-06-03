@@ -24,21 +24,9 @@ namespace Client.ECS.CurrentGame.Mining
             {
                 ref var entity = ref _filter.GetEntity(idx);
                 ref var stats = ref entity.Get<Stats>();
-                ref var block = ref entity.Get<BlockProvider>();
                 ref var hitStats = ref entity.Get<HitRequest>().HitterEntity.Get<Stats>();
 
-                switch (block.MineEquipType)
-                {
-                    case EquipType.Pickaxe:
-                        stats.Value[StatType.Health] -= hitStats.Value[StatType.MiningDamage];
-                        break;
-                    case EquipType.Shovel:
-                        stats.Value[StatType.Health] -= hitStats.Value[StatType.DigDamage];
-                        break;
-                    case EquipType.Axe:
-                        stats.Value[StatType.Health] -= hitStats.Value[StatType.CutDamage];
-                        break;
-                }
+                stats.Value[StatType.Health] -= hitStats.Value[StatType.MiningDamage];
 
                 if (stats.Value[StatType.Health] <= 0)
                     entity.Get<Timer<TimerToDisable>>().Value = 0.15f;

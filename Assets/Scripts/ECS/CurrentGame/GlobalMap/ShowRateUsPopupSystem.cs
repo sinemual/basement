@@ -21,7 +21,7 @@ namespace Client.ECS.CurrentGame.Hit.Systems
                 {
                     if (!_data.PlayerData.IsPlayerRatedGame)
                     {
-                        _ui.RateUsScreen.SetShowState(true);
+                        //_ui.RateUsScreen.SetShowState(true);
                         _analyticService.LogEvent("rate_us_popup_shown");
                     }
                 }

@@ -30,9 +30,7 @@ namespace Client
 
             _userInterfaceEventBus.GlobalMapScreen.GoToVillageButton += () =>
             {
-                _data.RuntimeData.CurrentGameState = !_data.PlayerData.TutrorialStates[TutorialStep.GoToVillage]
-                    ? GameState.SceneBurningVillage
-                    : GameState.Village;
+                _data.RuntimeData.CurrentGameState = GameState.Village;
                 
                 if (_data.InterstitialSettingsData.IsShowForGoToVillageTap)
                     _adsService.ShowInter("go_to_village");

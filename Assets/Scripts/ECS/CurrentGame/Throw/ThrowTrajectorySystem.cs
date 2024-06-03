@@ -28,13 +28,13 @@ namespace Client
                 ref var startPoint = ref entity.Get<ThrowTrajectoryProvider>().StartPoint;
                 ref var delta = ref entity.Get<Aim>().Delta;
                 lineRenderer.enabled = true;
-                lineRenderer.positionCount = 2;
+                lineRenderer.positionCount = _data.BalanceData.LinePoints;
 
                 delta *= Time.deltaTime * _data.BalanceData.AimSpeed;
                 startPoint.Rotate(Vector3.up, delta.x);
-                //startPoint.Rotate(Vector3.right, -delta.y);
+                startPoint.Rotate(Vector3.right, -delta.y);
                 
-                /*var startVelocity = _data.BalanceData.ThrowStrength * startPoint.forward / _data.BalanceData.ThrowMass;
+                var startVelocity = _data.BalanceData.ThrowStrength * startPoint.forward / _data.BalanceData.ThrowMass;
 
                 int i = 0;
                 for (float time = 0; time < _data.BalanceData.LinePoints; time += _data.BalanceData.TimeBetweenPoints)
@@ -43,7 +43,7 @@ namespace Client
                     Vector3 point = startPoint.position + time * startVelocity;
                     point.y = startPoint.position.y + startVelocity.y * time + (Physics.gravity.y / 2f * time * time);
                     lineRenderer.SetPosition(i, point);
-                }*/
+                }
                 
                 lineRenderer.SetPosition(0, startPoint.position);
 
