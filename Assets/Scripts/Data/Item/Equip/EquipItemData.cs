@@ -7,7 +7,7 @@ namespace Client.Data.Equip
     [CreateAssetMenu(menuName = "MineTap/EquipItemData", fileName = "EquipItemData")]
     public class EquipItemData : ItemData
     {
-        public EquipType Type;
+        public PlayerEquipType Type;
         public StatValue Stats;
     }
 }

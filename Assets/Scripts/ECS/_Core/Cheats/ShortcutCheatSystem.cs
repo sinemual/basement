@@ -61,7 +61,7 @@ namespace Client
             if (Input.GetKeyDown(KeyCode.N))
             {
                 //_ui.SetShowStateLevelCompleteScreen(true);
-                _data.PlayerData.CurrentLevelIndex++;
+                _data.PlayerData.CurrentWarStepIndex++;
                 _data.PlayerData.EventLevelIndex++;
                 _world.NewEntity().Get<DisposeLevelRequest>();
                 _world.NewEntity().Get<SpawnLevelRequest>();

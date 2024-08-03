@@ -31,7 +31,6 @@ public class AdsService
             return;
         
         if (!_timerEntity.Has<Timer<InterReloadTimer>>() &&
-            _data.PlayerData.EventLevelIndex > _data.InterstitialSettingsData.StartLevel &&
             _data.PlayerData.InterstitalCounter < _data.InterstitialSettingsData.DailyCap)
         {
             //AdsManager.Instance.ShowInterstitial(placement);

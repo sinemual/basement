@@ -49,7 +49,7 @@ namespace Client
                 PlayerSetup();
                 InitChests();
                 
-                if (_data.RuntimeData.CurrentLocationType != LocationType.Tutorial && _data.PlayerData.IsRandomLevel)
+                if (_data.RuntimeData.CurrentLocationType != LocationType.Tutorial)
                     level.CameraPointHandler.transform.rotation = Quaternion.Euler(0.0f, Utility.GetRandomTurnIslandAngle(), 0.0f);
 
                 UiSetup();
@@ -85,7 +85,7 @@ namespace Client
             _ui.OpenCraftScreen.SetShowState(false);
             _ui.OpenTntPickaxeBoosterScreen.SetShowState(false);
             //_ui.CraftScreen.SetShowState(true);
-            _ui.ChooseItemScreen.SetShowState(true);
+            _ui.changeEquipScreen.SetShowState(true);
         }
 
         private void CameraSetup(GameObject entityGo, LevelProvider level)

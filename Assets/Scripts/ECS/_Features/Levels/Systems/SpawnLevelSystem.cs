@@ -44,26 +44,26 @@ namespace Client
             Debug.Log($"CreateNextLevel");
             if (_data.PlayerData.EventLevelIndex > _data.StaticData.LevelsData.Levels.Count - 1)
             {
-                _data.PlayerData.CurrentLevelIndex = Random.Range(6, _data.StaticData.LevelsData.Levels.Count);
-                    while (_data.PlayerData.CurrentLevelIndex == _data.RuntimeData.LastLevelIndex)
-                        _data.PlayerData.CurrentLevelIndex = Random.Range(6, _data.StaticData.LevelsData.Levels.Count);
+                _data.PlayerData.CurrentWarStepIndex = Random.Range(6, _data.StaticData.LevelsData.Levels.Count);
+                    while (_data.PlayerData.CurrentWarStepIndex == _data.RuntimeData.LastLevelIndex)
+                        _data.PlayerData.CurrentWarStepIndex = Random.Range(6, _data.StaticData.LevelsData.Levels.Count);
             }
             
-            _data.RuntimeData.LastLevelIndex = _data.PlayerData.CurrentLevelIndex;
+            _data.RuntimeData.LastLevelIndex = _data.PlayerData.CurrentWarStepIndex;
 
-            EcsEntity entity = _prefabFactory.Spawn(_data.StaticData.LevelsData.Levels[_data.PlayerData.CurrentLevelIndex].gameObject, Vector3.zero,
+            EcsEntity entity = _prefabFactory.Spawn(_data.StaticData.LevelsData.Levels[_data.PlayerData.CurrentWarStepIndex].gameObject, Vector3.zero,
                 Quaternion.identity);
 
             _data.RuntimeData.CurrentLocationType = entity.Get<LevelProvider>().LocationType;
             
             entity.Get<CurrentLevelTag>();
             
-            Debug.Log($"CreateLevel level {_data.PlayerData.CurrentLevelIndex}");
+            Debug.Log($"CreateLevel level {_data.PlayerData.CurrentWarStepIndex}");
         }
 
         private void RestartLevel()
         {
-            _data.PlayerData.CurrentLevelIndex = _data.RuntimeData.LastLevelIndex;
+            _data.PlayerData.CurrentWarStepIndex = _data.RuntimeData.LastLevelIndex;
             CreateNextLevel();
         }
 
@@ -71,18 +71,10 @@ namespace Client
         {
             _data.RuntimeData.CurrentLocationType = location;
 
-            if (_data.PlayerData.IsRandomLevel)
-            {
-                _data.PlayerData.CurrentLevelIndex = Random.Range(0, _data.StaticData.LevelsData.RandomLevels[location].Value.Count);
-                if (_data.StaticData.LevelsData.RandomLevels[location].Value.Count > 1)
-                    while (_data.PlayerData.CurrentLevelIndex == _data.RuntimeData.LastLevelIndex)
-                        _data.PlayerData.CurrentLevelIndex = Random.Range(0, _data.StaticData.LevelsData.RandomLevels[location].Value.Count);
-            }
+            _data.RuntimeData.LastLevelIndex = _data.PlayerData.CurrentWarStepIndex;
+            Debug.Log($"CreateLevel level {_data.PlayerData.CurrentWarStepIndex}");
 
-            _data.RuntimeData.LastLevelIndex = _data.PlayerData.CurrentLevelIndex;
-            Debug.Log($"CreateLevel level {_data.PlayerData.CurrentLevelIndex}");
-
-            EcsEntity entity = _prefabFactory.Spawn(_data.StaticData.LevelsData.RandomLevels[location].Value[_data.PlayerData.CurrentLevelIndex].gameObject,
+            EcsEntity entity = _prefabFactory.Spawn(_data.StaticData.LevelsData.RandomLevels[location].Value[_data.PlayerData.CurrentWarStepIndex].gameObject,
                 Vector3.zero, Quaternion.identity);
             entity.Get<CurrentLevelTag>();
         }

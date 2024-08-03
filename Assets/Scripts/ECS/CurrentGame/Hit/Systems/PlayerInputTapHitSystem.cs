@@ -1,5 +1,6 @@
 using Client.Data;
 using Client.Data.Core;
+using Client.Data.Equip;
 using Client.DevTools.MyTools;
 using Client.ECS.CurrentGame.Hit.Components;
 using Leopotam.Ecs;
@@ -33,7 +34,7 @@ namespace Client.ECS.CurrentGame.Hit.Systems
 
         public void Run()
         {
-            if (_data.RuntimeData.CurrentGameState != GameState.OnLevel)
+            if (_data.RuntimeData.CurrentGameState != GameState.OnLevel || _data.RuntimeData.currentPlayerEquipMode != PlayerEquipType.Pickaxe )
                 return;
 
 #if UNITY_EDITOR

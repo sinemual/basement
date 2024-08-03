@@ -13,11 +13,8 @@ public class OpenCraftScreen : BaseScreen
             GameUi.AudioService.Play(Sounds.UiClickSound);
             GameUi.CraftScreen.SetShowState(true);
         });
-        
-        GameUi.EventBus.Resources.ChangeResourceAmount += UpdateNewRecipesMarkState;
     }
 
-    public void UpdateNewRecipesMarkState() => newUpgradeAvailableMark.SetActive(SharedData.RuntimeData.IsPlayerSeenAllAvailableRecipes());
     
     public Transform GetCraftFlyPoint() => showCraftScreenButton.gameObject.transform;
 

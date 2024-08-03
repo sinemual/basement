@@ -40,7 +40,7 @@ namespace Client.ECS.CurrentGame.Mining
                     .SetEase(Ease.InBounce).SetLink(block.Model);
 
                 CreateMiningVFX(block.Model.transform, block.Type);
-                CreateMiningAnimView(block.Model.transform, EquipType.Pickaxe);
+                CreateMiningAnimView(block.Model.transform, PlayerEquipType.Pickaxe);
 
                 _vibrationService.Vibrate(stats.Value[StatType.Health] <= 0 ? NiceHaptic.PresetType.SoftImpact : NiceHaptic.PresetType.RigidImpact);
                 _audioService.Play(stats.Value[StatType.Health] <= 0 ? Sounds.MineDoneSound : _data.AudioData.MiningByType[block.Type]);
@@ -55,7 +55,7 @@ namespace Client.ECS.CurrentGame.Mining
             spawnEntity.Get<Timer<DespawnTimer>>().Value = _data.BalanceData.DespawnVfxTime;
         }
 
-        private void CreateMiningAnimView(Transform spawnT, EquipType type)
+        private void CreateMiningAnimView(Transform spawnT, PlayerEquipType type)
         {
             EcsEntity spawnEntity = _prefabFactory.Spawn(_data.StaticData.PrefabData.MiningAnimViewPrefabs[type], spawnT.position,
                 Quaternion.identity);

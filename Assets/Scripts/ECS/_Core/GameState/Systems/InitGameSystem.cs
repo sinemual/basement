@@ -17,7 +17,7 @@ namespace Client
             _data.RuntimeData.ResetLevelData();
             
             _data.RuntimeData.CurrentGameState = GameState.OnLevel;
-            _ui.ChooseItemScreen.SetShowState(true);
+            _ui.changeEquipScreen.SetShowState(true);
             //game state
             /*if (_data.PlayerData.IsMechanicsTutorialComplete)
             {

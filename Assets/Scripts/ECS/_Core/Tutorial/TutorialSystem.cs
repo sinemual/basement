@@ -108,8 +108,6 @@ namespace Client
 
                 if (_data.PlayerData.CurrentTutorialStep == TutorialStep.UseItems) // mechanics last
                 {
-                    foreach (var recipe in _data.StaticData.ItemRecipes)
-                        _data.PlayerData.PlayerOpenedRecipes.Remove(recipe.Id);
                     _data.PlayerData.IsMechanicsTutorialComplete = true;
                 }
 

@@ -15,11 +15,11 @@ public class LoadGameService
         _ui = ui;
     }
 
-    public async Task StartGameLoad()
+    public Task StartGameLoad()
     {
         //Levels
         if (_data.StaticData.LevelsData.AlwaysLoadLevelId != -1)
-            _data.PlayerData.CurrentLevelIndex = _data.StaticData.LevelsData.AlwaysLoadLevelId;
+            _data.PlayerData.CurrentWarStepIndex = _data.StaticData.LevelsData.AlwaysLoadLevelId;
         /*
         var levelsHandle =
             Addressables.LoadAssetsAsync<GameObject>(_gameData.StaticData.LevelsData.Levels[_gameData.PlayerData.CurrentLevelPackIndex], null);
@@ -37,6 +37,7 @@ public class LoadGameService
        //Object.Instantiate(xHandle);
        
         HideLoadingScreen();
+        return Task.CompletedTask;
     }
 
     /*private async Task OnStartUpdateLoadingScreenProgress(List<AsyncOperationHandle<GameObject>> handles)

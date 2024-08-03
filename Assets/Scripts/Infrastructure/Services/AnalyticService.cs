@@ -10,10 +10,8 @@ public class AnalyticService
     public void LogEvent(string evnt)
     {
         var _params = new Dictionary<string, object>();
-        _params.Add("level_num", $"{_data.PlayerData.EventLevelIndex}");
-        _params.Add("map_num", $"{_data.PlayerData.CurrentLevelIndex}");
+        _params.Add("map_num", $"{_data.PlayerData.CurrentWarStepIndex}");
         _params.Add("location", $"{_data.RuntimeData.CurrentLocationType}");
-        _params.Add("isRandomLevel", $"{_data.PlayerData.IsRandomLevel}");
 
         string resourcesString = "";
         foreach (var res in _data.PlayerData.Resources)
@@ -31,10 +29,8 @@ public class AnalyticService
     {
         var _params = new Dictionary<string, object>();
         _params.Add(evnt, parameter);
-        _params.Add("level_num", $"{_data.PlayerData.EventLevelIndex}");
-        _params.Add("map_num", $"{_data.PlayerData.CurrentLevelIndex}");
+        _params.Add("map_num", $"{_data.PlayerData.CurrentWarStepIndex}");
         _params.Add("location", $"{_data.RuntimeData.CurrentLocationType}");
-        _params.Add("isRandomLevel", $"{_data.PlayerData.IsRandomLevel}");
 
         string resourcesString = "";
         foreach (var res in _data.PlayerData.Resources)

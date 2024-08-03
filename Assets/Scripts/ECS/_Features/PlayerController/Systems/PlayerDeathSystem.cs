@@ -18,7 +18,7 @@ namespace Client
         private AnalyticService _analyticService;
         
         private EcsFilter<PlayerDeathEvent> _filter;
-        private EcsFilter<EnemyShootProvider> _shootersFilter;
+        private EcsFilter<CharacterProvider> _shootersFilter;
 
         public void Run()
         {
@@ -36,7 +36,6 @@ namespace Client
                 foreach (var shooter in _shootersFilter)
                 {
                     _shootersFilter.GetEntity(shooter).Del<ShootingState>();
-                    _shootersFilter.GetEntity(shooter).Del<AttackPlayerRequest>();
                 }
             }
         }

@@ -17,7 +17,7 @@ namespace Client.ECS.CurrentGame.Mining
         private PrefabFactory _prefabFactory;
 
         private EcsFilter<BlockProvider, MineEvent> _mineFilter;
-        private EcsFilter<EnemyProvider, HitEvent>.Exclude<DeadState> _enemyFilter;
+        private EcsFilter<CharacterProvider, SoldierTag, HitEvent>.Exclude<DeadState> _enemyFilter;
 
         public void Run()
         {

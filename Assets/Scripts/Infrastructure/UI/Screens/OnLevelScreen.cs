@@ -19,7 +19,7 @@ public class OnLevelScreen : BaseScreen
     
     private void PrepareScreen()
     {
-        levelText.text = $"LEVEL {SharedData.PlayerData.EventLevelIndex + 1}";
+        levelText.text = $"LEVEL {SharedData.PlayerData.CurrentWarStepIndex + 1}";
         UpdateProgressBar();
     }
 

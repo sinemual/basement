@@ -29,6 +29,9 @@ namespace Data
         public float CurrentLevelExperience;
         public bool IsCurrentLevelCompleted;
         public LocationType CurrentLocationType;
+        public int CurrentMineLevelIndex;
+        public int CurrentGlobalMapPositionIndex;
+        public PlayerEquipType currentPlayerEquipMode;
         public PlayerData.ResourceAmountByType MinedLevelResources;
         
         [Header("Boosters")] 
@@ -44,7 +47,7 @@ namespace Data
 
         public double GetLevelReward()
         {
-            double value = SharedData.PlayerData.EventLevelIndex * SharedData.BalanceData.BaseLevelReward;
+            double value = SharedData.PlayerData.CurrentWarStepIndex * SharedData.BalanceData.BaseLevelReward;
             if (value < 100)
                 value = 100;
             return value;
@@ -106,25 +109,6 @@ namespace Data
             return isIt;
         }
 
-        public void PlayerOpenCraftScreen()
-        {
-            for (int i = 0; i < SharedData.PlayerData.PlayerOpenedRecipes.Count; i++)
-                if (!SharedData.PlayerData.IsPlayerSeenRecipeItem.Contains(SharedData.PlayerData.PlayerOpenedRecipes[i]))
-                    if (IsPlayerHasAllResourcesForCraft(
-                            SharedData.StaticData.ItemRecipes.First(x => (x.Id == SharedData.PlayerData.PlayerOpenedRecipes[i]))))
-                        SharedData.PlayerData.IsPlayerSeenRecipeItem.Add(SharedData.PlayerData.PlayerOpenedRecipes[i]);
-        }
-
-        public bool IsPlayerSeenAllAvailableRecipes()
-        {
-            bool value = false;
-            for (int i = 0; i < SharedData.PlayerData.PlayerOpenedRecipes.Count; i++)
-                if (!SharedData.PlayerData.IsPlayerSeenRecipeItem.Contains(SharedData.PlayerData.PlayerOpenedRecipes[i]))
-                    if (IsPlayerHasAllResourcesForCraft(
-                            SharedData.StaticData.ItemRecipes.First(x => (x.Id == SharedData.PlayerData.PlayerOpenedRecipes[i]))))
-                        value = true;
-            return value;
-        }
 
         /*public int ExperienceToNextLevel() => 
             ExperienceToLevel(SharedData.PlayerData.PlayerLevel + 1) - ExperienceToLevel(SharedData.PlayerData.PlayerLevel);

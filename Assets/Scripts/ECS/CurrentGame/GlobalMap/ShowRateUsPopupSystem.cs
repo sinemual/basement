@@ -17,7 +17,7 @@ namespace Client.ECS.CurrentGame.Hit.Systems
         {
             foreach (var idx in _levelFilter)
             {
-                if (_data.RateUsData.NumberOfLevelToShowPopup.Contains(_data.PlayerData.EventLevelIndex))
+                if (_data.RateUsData.NumberOfLevelToShowPopup.Contains(_data.PlayerData.CurrentWarStepIndex))
                 {
                     if (!_data.PlayerData.IsPlayerRatedGame)
                     {

@@ -6,7 +6,6 @@ using Client.Data.Core;
 using Client.Data.Equip;
 using Data.Base;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Data
 {
@@ -26,12 +25,9 @@ namespace Data
 
         [Header("Numbers")] 
         public double Currency;
-        public int CurrentLevelIndex;
-        public bool IsRandomLevel;
+        public int CurrentWarStepIndex;
         public int EventLevelIndex;
         public int InterstitalCounter;
-        public int PlayerAvatarGlobalMapPositionIndex;
-        public IsOpenLocations OpenLocations;
 
         [Header("Save Timers")] 
         public string OfflineTimeKey;
@@ -45,15 +41,14 @@ namespace Data
         public TutorialStep CurrentTutorialStep;
         public int GameProgressStep;
 
+        [Header("Soldiers")] public List<SoldierSaveData> SoldiersSaveData;
+        
         [Header("Tutorials")] public TutorialStateData TutrorialStates;
         [Header("Tasks Data")] public List<GoalStatusData> GameProgressData;
         
         [Header("Equip")] public EquipLevelByType Equipment;
         [Header("Resources")] public ResourceAmountByType Resources;
-        [Header("Craft")] public List<string> PlayerOpenedRecipes;
-        public List<string> IsPlayerSeenRecipeItem;
         [Header("Inventory")] public InventoryData Inventory;
-        [Header("Hand Item")] public string CurrentHandItemId;
         [Header("Building Save Data")] public BuildingSaveDataByType BuildingsSaveData;
 
         public void InjectData(SharedData sharedData)
@@ -66,36 +61,26 @@ namespace Data
         private void InitDefaultValues()
         {
             Currency = SharedData.BalanceData.StartMoney;
-            EventLevelIndex = 0;
-            PlayerAvatarGlobalMapPositionIndex = 0;
-            CurrentLevelIndex = 0;
+            CurrentWarStepIndex = 0;
             GameProgressStep = 0;
-            IsRandomLevel = false;
             
             IsMechanicsTutorialComplete = false;
             IsMetaTutorialComplete = false;
             CurrentTutorialStep = TutorialStep.Mining;
-            
-            CurrentHandItemId = "";
             
             IsVibrationOn = true;
             IsSoundOn = true;   
 
             for (var i = 0; i < TutrorialStates.Count; i++)
                 TutrorialStates[(TutorialStep)i] = false;
-            
-            PlayerOpenedRecipes = new List<string>();
-            IsPlayerSeenRecipeItem = new List<string>();
+
             Inventory = new InventoryData();
             
             for (var i = 0; i < Resources.Count; i++)
                 Resources[(ResourceType)i] = 0;
 
             for (var i = 0; i < Equipment.Count; i++)
-                Equipment[(EquipType)i] = 0;
-            
-            for (var i = 0; i < OpenLocations.Count; i++)
-                OpenLocations[(LocationType)i] = false;
+                Equipment[(PlayerEquipType)i] = 0;
             
             for (var i = 1; i < BuildingsSaveData.Count + 1; i++)
             {
@@ -115,6 +100,16 @@ namespace Data
                     IsRewardTaken = false,
                     CurrentValue = 0
                 };
+            
+            for (var i = 0; i < SoldiersSaveData.Count; i++)
+                SoldiersSaveData[i] = new SoldierSaveData
+                {
+                    Level = 0,
+                    WeaponLevel = 0,
+                    ArmorLevel = 0,
+                    SoldierType = SoldierType.Warrior,
+                    IsMutated = false
+                };
         }
         
         [Serializable]
@@ -128,7 +123,7 @@ namespace Data
         }
         
         [Serializable]
-        public class EquipLevelByType : SerializedDictionary<EquipType, int>
+        public class EquipLevelByType : SerializedDictionary<PlayerEquipType, int>
         {
         }
 
@@ -154,6 +149,8 @@ namespace Data
             public bool IsRewardTaken;
             public int CurrentValue;
         }
+        
+        
         
         [Serializable]
         public class BuildingSaveData

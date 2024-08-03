@@ -65,7 +65,7 @@ public class LevelCompleteScreen : BaseScreen
         newContentMark.gameObject.SetActive(false);
         //LevelCompleteReward = SharedData.RuntimeData.GetLevelReward();
         //rewardMoneyText.text = $"{Utility.FormatMoney(LevelCompleteReward)}";
-        levelCompleteText.text = $"LEVEL {SharedData.PlayerData.EventLevelIndex + 1}\nCOMPLETE";
+        levelCompleteText.text = $"LEVEL {SharedData.PlayerData.CurrentWarStepIndex + 1}\nCOMPLETE";
 
         if (SharedData.RuntimeData.IsPlayerHasAllResourcesForAnyBuild())
             newContentMark.gameObject.SetActive(true);

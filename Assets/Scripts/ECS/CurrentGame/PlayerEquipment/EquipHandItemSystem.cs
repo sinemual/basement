@@ -17,7 +17,6 @@ namespace Client.ECS.CurrentGame.PlayerEquipment
             foreach (var idx in _filter)
             {
                 ref var item = ref _filter.Get1(idx).Value;
-                _data.PlayerData.CurrentHandItemId = item.Id;
                 _playerFilter.GetEntity(0).Get<HandItem>().Data = item;
                 _ui.HandItemScreen.SetItem(item);
 

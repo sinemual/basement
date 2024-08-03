@@ -32,7 +32,7 @@ namespace Client.ECS.CurrentGame.Loot.Systems
                 if (itemData is ExperienceData expData)
                 {
                     var pos = itemGo.transform.position;
-                    var levelNum = _data.PlayerData.CurrentLevelIndex;
+                    var levelNum = _data.PlayerData.CurrentWarStepIndex;
 
                     itemGo.transform.GetChild(0).LookAt(_cameraService.GetCamera().transform.position, Vector3.up);
 
@@ -50,7 +50,7 @@ namespace Client.ECS.CurrentGame.Loot.Systems
                     {
                         _prefabFactory.Despawn(itemGo);
                         _audioService.Play(Sounds.ExpSound);
-                        if (levelNum == _data.PlayerData.CurrentLevelIndex)
+                        if (levelNum == _data.PlayerData.CurrentWarStepIndex)
                             _world.NewEntity().Get<GetExperienceRequest>().Value = 1;
                     });
 

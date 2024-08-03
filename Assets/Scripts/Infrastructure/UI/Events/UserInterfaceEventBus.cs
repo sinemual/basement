@@ -14,7 +14,7 @@ public class UserInterfaceEventBus
     public readonly LevelFailedScreenEvents LevelFailedScreen = new LevelFailedScreenEvents();
     public readonly SettingScreenEvents SettingScreen = new SettingScreenEvents();
     public readonly CraftScreenEvents CraftScreen = new CraftScreenEvents();
-    public readonly ChooseItemScreenEvents ChooseItemScreen = new ChooseItemScreenEvents();
+    public readonly ChangeItemScreenEvents ChangeItemScreen = new ChangeItemScreenEvents();
     public readonly NoAdsIapScreenEvents NoAdsIapScreen = new NoAdsIapScreenEvents();
     public readonly GameScreenEvents GameScreen = new GameScreenEvents();
     public readonly LevelGoalScreenEvents LevelGoalScreen = new LevelGoalScreenEvents();

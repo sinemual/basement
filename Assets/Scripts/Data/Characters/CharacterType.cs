@@ -11,6 +11,8 @@ namespace Client.Data
         Dragon = 6,
         Heller = 7,
         Villager = 8,
-        Cloud = 9
+        Cloud = 9,
+        PigMan = 10,
+        WolfMan = 11,
     }
 }

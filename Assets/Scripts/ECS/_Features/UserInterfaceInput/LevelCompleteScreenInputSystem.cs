@@ -33,14 +33,14 @@ namespace Client
 
             _userInterfaceEventBus.LevelCompleteScreen.StartNextLevelButton += () =>
             {
-                _data.PlayerData.CurrentLevelIndex++;
+                _data.PlayerData.CurrentWarStepIndex++;
                 _data.PlayerData.EventLevelIndex++;
 
                 _vibrationService.Vibrate(NiceHaptic.PresetType.LightImpact);
                 _audioService.Play(Sounds.UiClickSound);
                 _world.NewEntity().Get<DisposeLevelRequest>();
 
-                if (_data.PlayerData.CurrentLevelIndex % 5 == 0 && _data.PlayerData.CurrentLevelIndex > 11)
+                if (_data.PlayerData.CurrentWarStepIndex % 5 == 0 && _data.PlayerData.CurrentWarStepIndex > 11)
                     _data.RuntimeData.CurrentGameState = GameState.Village;
                 else
                     _world.NewEntity().Get<SpawnLevelRequest>();
@@ -51,7 +51,7 @@ namespace Client
 
             _userInterfaceEventBus.LevelCompleteScreen.BackToMetaButton += () =>
             {
-                _data.PlayerData.CurrentLevelIndex++;
+                _data.PlayerData.CurrentWarStepIndex++;
                 _data.PlayerData.EventLevelIndex++;
                 
                 _world.NewEntity().Get<DisposeLevelRequest>();

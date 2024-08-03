@@ -79,8 +79,6 @@ namespace Client
                 if (_data.PlayerData.EventLevelIndex == 1)
                     if (!_data.PlayerData.TutrorialStates[TutorialStep.CraftPickaxe])
                     {
-                        foreach (var recipe in _data.StaticData.ItemRecipes)
-                            _data.PlayerData.PlayerOpenedRecipes.Add(recipe.Id);
                         
                         _world.NewEntity().Get<AddResourceRequest>() = new AddResourceRequest()
                         {

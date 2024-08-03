@@ -24,8 +24,6 @@ public class CraftScreen : BaseScreen
 
     private void UpdateRecipePanels()
     {
-        SharedData.RuntimeData.PlayerOpenCraftScreen();
-
         int counter = 0;
         foreach (var equip in SharedData.PlayerData.Equipment)
         {
@@ -63,16 +61,16 @@ public class CraftScreen : BaseScreen
         }
     }
 
-    public void SetRewardAvailableButton(EquipType equipType)
+    public void SetRewardAvailableButton(PlayerEquipType playerEquipType)
     {
         foreach (var equip in SharedData.PlayerData.Equipment)
             adsUpgradeButtonByType[equip.Key].gameObject.SetActive(false);
 
-        adsUpgradeButtonByType[equipType].gameObject.SetActive(true);
-        adsUpgradeButtonByType[equipType].SetInteractable(GameUi.AdsService.IsRewardVideoReady());
-        adsUpgradeButtonByType[equipType].OnClickEvent.AddListener(
+        adsUpgradeButtonByType[playerEquipType].gameObject.SetActive(true);
+        adsUpgradeButtonByType[playerEquipType].SetInteractable(GameUi.AdsService.IsRewardVideoReady());
+        adsUpgradeButtonByType[playerEquipType].OnClickEvent.AddListener(
 #if UNITY_EDITOR
-            () => CraftItem(craftPanels[equipType].RecipeData)
+            () => CraftItem(craftPanels[playerEquipType].RecipeData)
 #else
                     () =>
             GameUi.AdsService.ShowRewardVideo($"ads_tool_{equipType}_upgrade", 
@@ -82,25 +80,25 @@ public class CraftScreen : BaseScreen
         );
     }
 
-    public void DisableRewardAvailableButton(EquipType equipType)
+    public void DisableRewardAvailableButton(PlayerEquipType playerEquipType)
     {
-        Debug.Log($"DisableRewardAvailableButton {equipType}");
-        adsUpgradeButtonByType[equipType].gameObject.SetActive(false);
+        Debug.Log($"DisableRewardAvailableButton {playerEquipType}");
+        adsUpgradeButtonByType[playerEquipType].gameObject.SetActive(false);
     }
 
-    private void Impact(EquipType type)
+    private void Impact(PlayerEquipType type)
     {
         craftPanels[type].Panel.transform.DORewind();
         craftPanels[type].Panel.transform.DOPunchScale(Vector3.one * 0.1f, 0.15f, 2, 0.5f);
     }
 
     [Serializable]
-    public class CraftEquipPanel : SerializedDictionary<EquipType, CraftItemsPanel>
+    public class CraftEquipPanel : SerializedDictionary<PlayerEquipType, CraftItemsPanel>
     {
     }
 
     [Serializable]
-    public class AdsUpgradeButtonByType : SerializedDictionary<EquipType, ActionButton>
+    public class AdsUpgradeButtonByType : SerializedDictionary<PlayerEquipType, ActionButton>
     {
     }
 }

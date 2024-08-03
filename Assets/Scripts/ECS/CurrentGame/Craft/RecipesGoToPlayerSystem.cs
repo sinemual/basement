@@ -49,8 +49,6 @@ namespace Client.ECS.CurrentGame.Hit.Systems
                     {
                         _prefabFactory.Despawn(itemGo);
                         _audioService.Play(Sounds.PickupSound);
-                        _data.PlayerData.PlayerOpenedRecipes.Add(data.Id);
-                        _ui.OpenCraftScreen.UpdateNewRecipesMarkState();
                     });
                 
                     entity.Del<GoToPlayerRequest>();

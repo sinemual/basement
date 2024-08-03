@@ -30,6 +30,7 @@ namespace Client.Data
         public ChestByLevelData ChestsData;
         public BuildingTypeData BuildingsData;
         public LocationNeededLevelData LocationNeededLevelData;
+        public BattlefieldByLevelData BattlefieldByLevelData;
         
         [FoldoutGroup("Tags"), Tag] public string GroundTag;
         [FoldoutGroup("Tags"), Tag] public string PlayerTag;
@@ -74,7 +75,7 @@ namespace Client.Data
         [Button]
         public void FillEquipRecipesDatabase()
         {
-            foreach (EquipType equipType in (EquipType[])Enum.GetValues(typeof(EquipType)))
+            foreach (PlayerEquipType equipType in (PlayerEquipType[])Enum.GetValues(typeof(PlayerEquipType)))
             foreach (var recipe in EquipRecipes[equipType].Value)
                 foreach (var item in AllEquip[equipType].Value)
                             if (recipe.Level == item.Level)
@@ -109,7 +110,7 @@ namespace Client.Data
     }
     
     [Serializable]
-    public class EquipByTypeData : SerializedDictionary<EquipType, ListEquipItemData>
+    public class EquipByTypeData : SerializedDictionary<PlayerEquipType, ListEquipItemData>
     {
     }
 
@@ -120,7 +121,7 @@ namespace Client.Data
     }
     
     [Serializable]
-    public class RecipeEquipByTypeData : SerializedDictionary<EquipType, ListRecipeEquipItemData>
+    public class RecipeEquipByTypeData : SerializedDictionary<PlayerEquipType, ListRecipeEquipItemData>
     {
     }
     
@@ -142,6 +143,11 @@ namespace Client.Data
     
     [Serializable]
     public class BuildingTypeData : SerializedDictionary<BuildingType, ListBuildingData>
+    {
+    }
+    
+    [Serializable]
+    public class BattlefieldByLevelData : SerializedDictionary<int, BattlefieldData>
     {
     }
     

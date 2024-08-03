@@ -54,15 +54,6 @@ namespace Client
                     entity.Get<Stats>().Value[StatType.FullHealth],
                     entity.Get<Stats>().Value[StatType.Health]);
                 
-                if (_data.PlayerData.CurrentHandItemId != "")
-                    entity.Get<EquipHandItemRequest>().Value = _data.StaticData.ItemDatabase.First(x => (x.Id == _data.PlayerData.CurrentHandItemId));
-
-                /*_prefabFactory.Spawn(_data.StaticData.PrefabData.PlayerPrefab, _cameraService.GetCamera().transform.position,
-               _cameraService.GetCamera().transform.rotation, _cameraService.GetCamera().transform);*/
-                //check if player hasn't pickaxe and show craft panel
-                /*if (!_data.PlayerData.Equipment.ContainsKey(EquipType.Pickaxe) && _data.PlayerData.EventLevelIndex > 1)
-                    _ui.CraftScreen.SetShowState(true);*/
-                
                 entity.Get<InitedMarker>();
             }
         }

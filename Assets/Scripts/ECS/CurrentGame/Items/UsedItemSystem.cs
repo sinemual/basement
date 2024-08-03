@@ -27,12 +27,10 @@ namespace Client.ECS.CurrentGame.Mining
                 //Debug.Log($"{item.Id}");
                 if (_data.PlayerData.Inventory.ContainsKey(item.Id))
                 {
-                    _data.PlayerData.CurrentHandItemId = item.Id;
                     _playerFilter.GetEntity(0).Get<HandItem>().Data = item;
                 }
                 else
                 {
-                    _data.PlayerData.CurrentHandItemId = "";
                     _playerFilter.GetEntity(0).Del<HandItem>();
                 }
             }

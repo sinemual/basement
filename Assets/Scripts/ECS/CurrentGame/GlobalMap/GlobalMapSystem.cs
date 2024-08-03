@@ -59,56 +59,6 @@ namespace Client.ECS.CurrentGame.Hit.Systems
                 {
                     globalMapProvider.Locations[(LocationType)i].material = _data.StaticData.ClosedLocationMaterial;
                     //globalMapProvider.Locations[(LocationType)i].GetComponent<Outlinable>().enabled = false;
-                    if (_data.PlayerData.OpenLocations[(LocationType)i])
-                    {
-                        globalMapProvider.Locations[(LocationType)i].material = _data.StaticData.OpenedLocationMaterial;
-                        //globalMapProvider.Locations[(LocationType)i].GetComponent<Outlinable>().enabled = true;
-                    }
-                }
-                
-                    
-                globalMapProvider.PlayerAvatar.transform.DOJump(
-                    globalMapProvider.LevelPoints[_data.PlayerData.PlayerAvatarGlobalMapPositionIndex].transform.position + Vector3.up * 0.1f, 0.5f,
-                    1, 0.05f);
-                globalMapProvider.PlayerAvatar.transform.DOLookAt(
-                    globalMapProvider.LevelPoints[_data.PlayerData.PlayerAvatarGlobalMapPositionIndex + 1].transform.position + Vector3.up * 0.1f,
-                    0.05f, AxisConstraint.Y);
-
-                var sequence = DOTween.Sequence();
-
-                for (int i = 0; i < globalMapProvider.LevelPoints.Count; i++)
-                {
-                    if (i < _data.PlayerData.EventLevelIndex)
-                    {
-                        globalMapProvider.LevelPoints[i].modelRenderer.material = _data.StaticData.PreviousLevelPointMaterial;
-                        if (i > _data.PlayerData.PlayerAvatarGlobalMapPositionIndex)
-                        {
-                            sequence.Append(globalMapProvider.PlayerAvatar.transform.DOJump(
-                                globalMapProvider.LevelPoints[i].transform.position + Vector3.up * 0.1f, 0.5f, 1,
-                                0.3f));
-                            if (_data.PlayerData.EventLevelIndex <= _data.StaticData.LevelsData.Levels.Count - 1)
-                                sequence.Join(globalMapProvider.PlayerAvatar.transform.DOLookAt(
-                                    globalMapProvider.LevelPoints[i + 1].transform.position + Vector3.up * 0.1f, 0.3f, AxisConstraint.Y));
-                        }
-                    }
-                    else if (i == _data.PlayerData.EventLevelIndex)
-                    {
-                        sequence.Play();
-                        var i1 = i;
-                        sequence.OnComplete(() =>
-                        {
-                            globalMapProvider.PlayerAvatar.transform.DOJump(globalMapProvider.LevelPoints[i1].transform.position + Vector3.up * 0.1f,
-                                0.5f, 1, 0.3f);
-                            if (_data.PlayerData.EventLevelIndex <= _data.StaticData.LevelsData.Levels.Count - 1)
-                                globalMapProvider.PlayerAvatar.transform.DOLookAt(
-                                    globalMapProvider.LevelPoints[i1 + 1].transform.position + Vector3.up * 0.1f, 0.3f, AxisConstraint.Y);
-                            _data.PlayerData.PlayerAvatarGlobalMapPositionIndex = i1;
-                        });
-
-                        globalMapProvider.LevelPoints[i].modelRenderer.material = _data.StaticData.CurrentLevelPointMaterial;
-                    }
-                    else
-                        globalMapProvider.LevelPoints[i].modelRenderer.material = _data.StaticData.NextLevelPointMaterial;
                 }
             }
 

@@ -10,13 +10,18 @@ namespace Client.Data
     {
         public GameObject EmptyPrefab;
         public GameObject PlayerPrefab;
+        public GameObject PigPrefab;
+        public GameObject WolfPrefab;
         public GameObject TapProgressBarPrefab;
+        public List<GameObject> Bows;
+        public List<GameObject> Swords;
+        public List<GameObject> Armors;
         public GameObject HealthBarPrefab;
         public GameObject TntPickaxeExplosionSourcePrefab;
 
         [Header("Money")] 
         public GameObject EarnInfoPrefab;
-        public GameObject DropMoneyPrefab;
+        public GameObject ArrowPrefab;
         public ShotByCharacterType ShotPrefabs;
 
         [Header("VFXs")] 
@@ -41,7 +46,7 @@ namespace Client.Data
         }
         
         [Serializable]
-        public class MiningAnimViewByType : SerializedDictionary<EquipType, GameObject>
+        public class MiningAnimViewByType : SerializedDictionary<PlayerEquipType, GameObject>
         {
         }
         

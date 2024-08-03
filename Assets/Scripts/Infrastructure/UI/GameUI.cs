@@ -30,7 +30,7 @@ public class GameUI : MonoBehaviour
     public GlobalMapScreen GlobalMapScreen;
     public HandItemScreen HandItemScreen;
     public CraftScreen CraftScreen;
-    public ChooseItemScreen ChooseItemScreen;
+    public ChangeEquipScreen changeEquipScreen;
     public BuildScreen BuildScreen;
     //public GetItemScreen GetItemScreen;
     public ChestScreen ChestScreen;

@@ -142,12 +142,14 @@ namespace Client
                 .Add(new AudioInitSystem())
                 .Add(new CameraControlSystem())
                 .Add(new RagdollSystem())
-                //---Throw---
+                //---Shooting---
                 //.Add(new TakeThrowItemSystem())
+                .Add(new ChangeItemSystem())
                 .Add(new InputJoystickSystem())
-                .Add(new InputThrowSystem())
-                .Add(new ThrowTrajectorySystem())
-                .Add(new ThrowSystem())
+                .Add(new InputShootSystem())
+                .Add(new LoadArrowSystem())
+                .Add(new ShootTrajectorySystem())
+                .Add(new ShootSystem())
                 .Add(spawnSystems)
                 .Add(movementSystems)
                 //------GLOBAL MAP------
@@ -194,21 +196,25 @@ namespace Client
                 .Add(new MiningDestroySystem())
                 .Add(new ExplosionMiningDestroySystem())
                 //---Fighting---
-                .Add(new InitEnemySystem())
-                .Add(new EnemyTakeDamageSystem())
-                .Add(new EnemyCheckPlayerSystem())
-                .Add(new EnemyStartShootPlayerSystem())
-                .Add(new EnemyShootPlayerSystem())
+                .Add(new InitCharacterSystem())
+                .Add(new CharacterTakeDamageSystem())
+                .Add(new CharacterCheckPlayerSystem())
+                //.Add(new EnemyStartShootPlayerSystem())
+                //.Add(new EnemyShootPlayerSystem())
                 //.Add(new DamageDropPlayerResourcesSystem())
-                .Add(new ExplosionEnemyTakeDamageSystem())
+                .Add(new ExplosionCharacterTakeDamageSystem())
                 .Add(new ForceImpactSystem())
                 .Add(new TntPickaxeBoosterSystem())
+                //---Mobs---
+                .Add(new InitCharacterSystem())
+                //---Battle---
+                .Add(new InitCharacterSystem())
                 //---Loot---
                 .Add(new SpawnLootSystem())
                 .Add(new ResourceGoToPlayerSystem())
                 .Add(new ExperienceGoToPlayerSystem())
                 .Add(new UsableItemGoToPlayerSystem())
-                //---Loot_UI---
+                //---LootUI---
                 .Add(new UiSpawnLootSystem())
                 .Add(new UiResourceGoToPlayerSystem())
                 .Add(new UiUsableItemGoToPlayerSystem())
@@ -216,7 +222,7 @@ namespace Client
                 .Add(new HitTapProgressBarSystem())
                 //---Health---
                 .Add(new UnderwaterKillSystem())
-                .Add(new ExplosionEnemySystem())
+                .Add(new ExplosionCharacterSystem())
                 .Add(new DeathSystem())
                 //---Calculates---
                 .Add(new ExperienceSystem())
@@ -226,9 +232,6 @@ namespace Client
                 //.Add(new CheckProgressTutorialSystem())
                 //.Add(new TutorialSystem())
                 //.Add(new StartTutorialSystem())
-                //---GlobalMap2---
-                .Add(new OpenLocationGlobalMapSystem())
-                //.Add(new ShowRateUsPopupSystem())
                 //---Events---
                 .Add(new CatchEventSystem())
                 //---OneFrames---
